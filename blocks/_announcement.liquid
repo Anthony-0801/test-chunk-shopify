@@ -5,27 +5,7 @@
 {%- assign block_index = section.blocks | find_index: 'id', block.id -%}
 
 {%- unless plain_text == '' -%}
-  <slideshow-slide
-    ref="slides[]"
-    class="
-      announcement-bar__slide
-      text-block
-      text-block--{{ block.id }}
-      text-block--align-center
-      text-block--full-width
-      custom-typography
-      {% if block_settings.font_size != "" %}custom-font-size{% endif %}
-      {% if block_settings.weight != "" %}custom-font-weight{% endif %}
-    "
-    style="
-      {% render 'typography-style', settings: block_settings, preset: 'custom' %}
-      --width: 100%;
-      --text-align: center;
-      --line-height: 1;
-    "
-    {{ block.shopify_attributes }}
-    aria-hidden="{% if block_index == 0 %}false{% else %}true{% endif %}"
-  >
+ 
     {%- comment -%}
       Wrap announcement text in a marquee container. The animation duration is driven
       by the parent section's `speed` setting (fallback 5s). Animation pauses on hover
@@ -48,7 +28,7 @@
         </span>
       </a>
     {% endif %}
-  </slideshow-slide>
+  
 {%- endunless -%}
 
 {% stylesheet %}
