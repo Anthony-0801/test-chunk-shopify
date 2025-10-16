@@ -194,7 +194,7 @@
         "section_width": "page-width",
         "section_height": "small",
         "section_height_custom": 50,
-        "color_scheme": "",
+        "color_scheme": "scheme-983a5862-3174-4887-926b-9a3dbf93f9f7",
         "background_media": "none",
         "video_position": "cover",
         "background_image": "shopify://shop_images/backgroundUpcut.png",
@@ -400,7 +400,7 @@
         "section_width": "page-width",
         "horizontal_alignment": "flex-start",
         "gap": 28,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-983a5862-3174-4887-926b-9a3dbf93f9f7",
         "padding-block-start": 48,
         "padding-block-end": 48
       }
