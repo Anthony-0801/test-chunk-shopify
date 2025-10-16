@@ -26,8 +26,16 @@
     {{ block.shopify_attributes }}
     aria-hidden="{% if block_index == 0 %}false{% else %}true{% endif %}"
   >
-    <p class="announcement-bar__text">
-      {{ block.settings.text }}
+    {%- comment -%}
+      Wrap announcement text in a marquee container. The animation duration is driven
+      by the parent section's `speed` setting (fallback 5s). Animation pauses on hover
+      and is disabled when user prefers reduced motion.
+    {%- endcomment -%}
+    <p
+      class="announcement-bar__text announcement-bar__marquee"
+      style="--marquee-duration: {{ section.settings.speed | default: 5 }}s;"
+    >
+      <span class="announcement-marquee__inner">{{ block.settings.text }}</span>
     </p>
 
     {% if block_settings.link != blank %}
@@ -117,6 +125,42 @@
   .text-block--align-center,
   .text-block--align-center > * {
     margin-inline: auto;
+  }
+
+  /* Marquee styles for announcements */
+  .announcement-bar__marquee {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .announcement-marquee__inner {
+    display: inline-block;
+    white-space: nowrap;
+    will-change: transform;
+    /* default duration can be overridden with --marquee-duration */
+    animation: marquee var(--marquee-duration, 5s) linear infinite;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Pause on hover to improve readability */
+  .announcement-bar__marquee:hover .announcement-marquee__inner {
+    animation-play-state: paused;
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .announcement-marquee__inner {
+      animation: none;
+      transform: none;
+    }
   }
 
   .text-block--align-right,
