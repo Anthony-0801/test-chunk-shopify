@@ -134,8 +134,11 @@
   }
 
   .announcement-marquee__inner {
-    display: inline-block;
+    /* Make the inner element fill its parent so the announcement occupies 100% of the container */
+    display: block;
+    width: 100%;
     white-space: nowrap;
+    text-align: center;
     will-change: transform;
     /* default duration can be overridden with --marquee-duration */
     animation: marquee var(--marquee-duration, 5s) linear infinite;
