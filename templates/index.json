@@ -134,7 +134,7 @@
         "vertical_alignment": "flex-end",
         "align_baseline": true,
         "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "flex-end",
+        "vertical_alignment_flex_direction_column": "space-between",
         "gap": 24,
         "section_width": "page-width",
         "section_height": "medium",
@@ -145,7 +145,7 @@
         "overlay_style": "gradient",
         "gradient_direction": "to top",
         "blurred_reflection": false,
-        "reflection_opacity": 75,
+        "reflection_opacity": 100,
         "padding-block-start": 100,
         "padding-block-end": 72
       }
