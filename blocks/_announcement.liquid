@@ -31,12 +31,12 @@
       by the parent section's `speed` setting (fallback 5s). Animation pauses on hover
       and is disabled when user prefers reduced motion.
     {%- endcomment -%}
-    <p
+    <div
       class="announcement-bar__text announcement-bar__marquee"
-      style="--marquee-duration: {{ section.settings.speed | default: 5 }}s;"
+      style="--marquee-duration: {{ section.settings.speed | default: 5 }}s; --width: 100%;"
     >
       <span class="announcement-marquee__inner">{{ block.settings.text }}</span>
-    </p>
+    </div>
 
     {% if block_settings.link != blank %}
       <a
