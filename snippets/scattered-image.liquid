@@ -10,6 +10,8 @@
           src="{{ block.settings.image | image_url }}"
           alt="scattered image"
           style="display:block;height:{{ block.settings.item_size }}px;width:{{ block.settings.item_size }}px;z-index:{{ block.settings.z_index | default: 1 }};"
+          width="{{ block.settings.item_size }}"
+          height="{{ block.settings.item_size }}"
         >
       </div>
     {% endif %}

@@ -11,7 +11,7 @@ Logo Marquee section
       {% for block in section.blocks %}
         {% if block.type == 'logo' and block.settings.image != blank %}
           <div class="logo-marquee__item">
-            <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.image.alt | escape }}" style="height: var(--logo-height);" loading="lazy" />
+            <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.image.alt | escape }}" style="height: var(--logo-height);" loading="lazy" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" />
           </div>
         {% endif %}
       {% endfor %}
@@ -22,7 +22,7 @@ Logo Marquee section
       {% for block in section.blocks %}
         {% if block.type == 'logo' and block.settings.image != blank %}
           <div class="logo-marquee__item">
-            <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.image.alt | escape }}" style="height: var(--logo-height);" loading="lazy" />
+            <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.image.alt | escape }}" style="height: var(--logo-height);" loading="lazy" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" />
           </div>
         {% endif %}
       {% endfor %}
@@ -66,12 +66,9 @@ Logo Marquee section
     to { transform: translateX(-50%); }
   }
 
-  /* Pause on hover if enabled */
-  {% if section.settings.pause_on_hover %}
-    .logo-marquee__inner:hover .logo-marquee__track {
-      animation-play-state: paused;
-    }
-  {% endif %}
+  .logo-marquee__inner:hover .logo-marquee__track {
+    animation-play-state: paused;
+  }
 
   /* Respect reduced motion */
   @media (prefers-reduced-motion: reduce) {
