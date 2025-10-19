@@ -43,72 +43,11 @@
         "floating_button_text": "FIND STORE",
         "floating_button_url": "",
         "floating_button_image": "shopify://shop_images/starButton.png",
+        "product_image": "shopify://shop_images/productGroup.png",
         "button1_text": "SHOP NOW",
         "button1_url": "shopify://collections/all",
         "button2_text": "SHOP BUNDLE",
-        "button2_url": "shopify://collections/all",
-        "product_image": "shopify://shop_images/productGroup.png"
-      }
-    },
-    "section_NB7MUj": {
-      "type": "section",
-      "blocks": {
-        "image_yL7WXC": {
-          "type": "image",
-          "name": "t:names.image",
-          "settings": {
-            "image": "shopify://shop_images/productGroup.png",
-            "link": "",
-            "image_ratio": "adapt",
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "image_yL7WXC"
-      ],
-      "custom_css": [],
-      "name": "Product Showcase",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "medium",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-983a5862-3174-4887-926b-9a3dbf93f9f7",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image": "shopify://shop_images/backgroundUpcut.png",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": true,
-        "overlay_color": "#ff819b",
-        "overlay_style": "gradient",
-        "gradient_direction": "to bottom",
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "button2_url": "shopify://collections/all"
       }
     },
     "section_QPKqeC": {
@@ -512,7 +451,6 @@
   },
   "order": [
     "hero_jVaWmY",
-    "section_NB7MUj",
     "section_QPKqeC",
     "product_list_fa6P9H"
   ]
