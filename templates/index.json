@@ -42,10 +42,12 @@
         "title": "Bite-size Clusters, Supersized taste",
         "floating_button_text": "FIND STORE",
         "floating_button_url": "",
+        "floating_button_image": "shopify://shop_images/starButton.png",
         "button1_text": "SHOP NOW",
         "button1_url": "shopify://collections/all",
         "button2_text": "SHOP BUNDLE",
-        "button2_url": "shopify://collections/all"
+        "button2_url": "shopify://collections/all",
+        "product_image": "shopify://shop_images/productGroup.png"
       }
     },
     "section_NB7MUj": {
