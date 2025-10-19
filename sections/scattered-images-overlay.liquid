@@ -1,0 +1,108 @@
+<section class="scattered-images-overlay">
+  {% render 'scattered-image', blocks: section.blocks %}
+</section>
+
+{% stylesheet %}
+  .scattered-images-overlay {
+    position: relative;
+    width: 100%;
+    height: 0;
+    pointer-events: none;
+  }
+
+  .scattered-images-overlay .scattered-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 100;
+  }
+
+  .scattered-images-overlay .scattered-image-item {
+    position: absolute;
+    pointer-events: auto;
+  }
+
+  .scattered-images-overlay .scattered-image-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Scattered Images Overlay",
+  "tag": "section",
+  "class": "scattered-overlay-section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Add scattered image blocks below to position images anywhere on the viewport. Each image can be positioned, rotated, sized, and layered with custom z-index."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "custom_scattered_image",
+      "name": "Scattered Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "range",
+          "id": "top_image",
+          "label": "Top (%)",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "left_image",
+          "label": "Left (%)",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "rotation_image",
+          "label": "Rotation (deg)",
+          "min": 0,
+          "max": 360,
+          "step": 1,
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "item_size",
+          "label": "Size (px)",
+          "min": 10,
+          "max": 500,
+          "step": 10,
+          "default": 100
+        },
+        {
+          "type": "number",
+          "id": "z_index",
+          "label": "Z-Index",
+          "default": 100
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scattered Images Overlay"
+    }
+  ]
+}
+{% endschema %}

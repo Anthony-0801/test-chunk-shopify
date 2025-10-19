@@ -253,10 +253,6 @@
       %}
       {{ media }}
     </div>
-    {%- comment -%}
-      I'll render here the scattered image - Anthony
-    {%- endcomment -%}
-    {% render 'scattered-image', blocks: section.blocks %}
     <div
       class="
         hero__content-wrapper
@@ -453,23 +449,6 @@
         left: auto;
       }
     }
-  }
-
-  scattered-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-    animation: float 3s ease-in-out;
-  }
-
-  .scattered-image-item {
-    position: absolute;
-    z-index: 0;
-    pointer-events: none;
   }
 {% endstylesheet %}
 
