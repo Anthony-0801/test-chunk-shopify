@@ -11,34 +11,24 @@
   "type": "header",
   "name": "Header",
   "sections": {
-    "header_announcements_YBhWMc": {
-      "type": "header-announcements",
+    "custom_announcement_bar": {
+      "type": "custom-announcement",
       "blocks": {
-        "announcement_QgaiJw": {
-          "type": "_announcement",
+        "icon_1": {
+          "type": "custom_icon",
           "settings": {
-            "text": "Shop our latest arrivals!",
-            "link": "",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "weight": "",
-            "letter_spacing": "normal",
-            "case": "none"
+            "logo": ""
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "announcement_QgaiJw"
+        "icon_1"
       ],
-      "name": "t:names.announcement_bar",
+      "name": "Custom Announcement",
       "settings": {
-        "speed": 5,
-        "section_width": "page-width",
-        "color_scheme": "scheme-983a5862-3174-4887-926b-9a3dbf93f9f7",
-        "divider_width": 0,
-        "padding-block-start": 15,
-        "padding-block-end": 15
+        "text": "Free Shipping Over $50",
+        "repeat": 3
       }
     },
     "header_section": {
@@ -112,7 +102,7 @@
     }
   },
   "order": [
-    "header_announcements_YBhWMc",
+    "custom_announcement_bar",
     "header_section"
   ]
 }
