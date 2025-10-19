@@ -17,9 +17,8 @@
         "icon_1": {
           "type": "custom_icon",
           "settings": {
-            "logo": ""
-          },
-          "blocks": {}
+            "logo": "shopify://shop_images/announcement_logo.png"
+          }
         }
       },
       "block_order": [
