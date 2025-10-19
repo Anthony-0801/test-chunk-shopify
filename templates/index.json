@@ -1,16 +1,47 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero_jVaWmY": {
       "type": "custom-hero",
-      "blocks": {},
-      "block_order": [],
+      "blocks": {
+        "custom_scattered_image_9ixVaN": {
+          "type": "custom_scattered_image",
+          "settings": {
+            "image": "shopify://shop_images/sc_nibbles1.png",
+            "top_image": 0,
+            "left_image": -5,
+            "rotation_image": 0,
+            "item_size": 231
+          }
+        },
+        "custom_scattered_image_kr3WN6": {
+          "type": "custom_scattered_image",
+          "settings": {
+            "image": "shopify://shop_images/sc_nibbles2.png",
+            "top_image": 0,
+            "left_image": 87,
+            "rotation_image": 0,
+            "item_size": 299
+          }
+        }
+      },
+      "block_order": [
+        "custom_scattered_image_9ixVaN",
+        "custom_scattered_image_kr3WN6"
+      ],
       "name": "Custom Hero",
       "settings": {
         "title": "Bite-size Clusters, Supersized taste",
         "floating_button_text": "FIND STORE",
         "floating_button_url": "",
-        "floating_button_image": "",
-        "product_image": "",
         "button1_text": "SHOP NOW",
         "button1_url": "shopify://collections/all",
         "button2_text": "SHOP BUNDLE",
