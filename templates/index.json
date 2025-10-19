@@ -26,16 +26,60 @@
           "type": "custom_scattered_image",
           "settings": {
             "image": "shopify://shop_images/sc_nibbles2.png",
-            "top_image": 0,
+            "top_image": 10,
             "left_image": 87,
             "rotation_image": 0,
             "item_size": 299
+          }
+        },
+        "custom_scattered_image_KbGTyi": {
+          "type": "custom_scattered_image",
+          "settings": {
+            "image": "shopify://shop_images/sc_nibbles3.png",
+            "top_image": 52,
+            "left_image": -4,
+            "rotation_image": 0,
+            "item_size": 192
+          }
+        },
+        "custom_scattered_image_rMKna7": {
+          "type": "custom_scattered_image",
+          "settings": {
+            "image": "shopify://shop_images/sc_nibbles4.png",
+            "top_image": 45,
+            "left_image": 19,
+            "rotation_image": 0,
+            "item_size": 160
+          }
+        },
+        "custom_scattered_image_XUtTxB": {
+          "type": "custom_scattered_image",
+          "settings": {
+            "image": "shopify://shop_images/sc_nibbles5.png",
+            "top_image": 34,
+            "left_image": 68,
+            "rotation_image": 0,
+            "item_size": 100
+          }
+        },
+        "custom_scattered_image_pb8d8X": {
+          "type": "custom_scattered_image",
+          "settings": {
+            "image": "shopify://shop_images/sc_nibbles6.png",
+            "top_image": 47,
+            "left_image": 74,
+            "rotation_image": 0,
+            "item_size": 148
           }
         }
       },
       "block_order": [
         "custom_scattered_image_9ixVaN",
-        "custom_scattered_image_kr3WN6"
+        "custom_scattered_image_kr3WN6",
+        "custom_scattered_image_KbGTyi",
+        "custom_scattered_image_rMKna7",
+        "custom_scattered_image_XUtTxB",
+        "custom_scattered_image_pb8d8X"
       ],
       "name": "Custom Hero",
       "settings": {
