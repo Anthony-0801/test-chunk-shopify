@@ -1,0 +1,537 @@
+# Codebase File Map
+
+This file lists all files in your Shopify theme, organized by folder. Use it to find, review, or clean up unused files.
+
+---
+
+## assets/
+- accordion-custom.js
+- account-login-actions.js
+- anchored-popover.js
+- announcement-bar.js
+- auto-close-details.js
+- base.css
+- blog-posts-list.js
+- cart-discount.js
+- cart-drawer.js
+- cart-icon.js
+- cart-note.js
+- collection-links.js
+- component-cart-items.js
+- component-quantity-selector.js
+- component.js
+- copy-to-clipboard.js
+- critical.js
+- dialog.js
+- disclosure-custom.js
+- drag-zoom-wrapper.js
+- email-signup.js
+- events.js
+- facets.js
+- floating-panel.js
+- focus.js
+- gift-card-recipient-form.js
+- global.d.ts
+- header-drawer.js
+- header-menu.js
+- header.js
+- icon-account.svg
+- icon-add-to-cart.svg
+- icon-arrow.svg
+- icon-available.svg
+- icon-caret.svg
+- icon-cart.svg
+- icon-checkmark.svg
+- icon-close.svg
+- icon-delete.svg
+- icon-discount.svg
+- icon-error.svg
+- icon-external.svg
+- icon-filter.svg
+- icon-filters-close.svg
+- icon-grid-default.svg
+- icon-grid-dense.svg
+- icon-inventory.svg
+- icon-menu.svg
+- icon-minus.svg
+- icon-one-col-mobile.svg
+- icon-orders.svg
+- icon-pause.svg
+- icon-play.svg
+- icon-plus.svg
+- icon-reset.svg
+- icon-search.svg
+- icon-shopify.svg
+- icon-unavailable.svg
+- jsconfig.json
+- jumbo-text.js
+- local-pickup.js
+- localization.js
+- marquee.js
+- media-gallery.js
+- media.js
+- morph.js
+- overflow-list.css
+- paginated-list-aspect-ratio.js
+- paginated-list.js
+- performance.js
+- popover-polyfill.js
+- predictive-search.js
+- product-card-link.js
+- product-card.js
+- product-custom-property.js
+- product-form.js
+- product-inventory.js
+- product-price.js
+- product-recommendations.js
+- product-title-truncation.js
+- qr-code-generator.js
+- qr-code-image.js
+- quick-add.js
+- recently-viewed-products.js
+- results-list.js
+- rte-formatter.js
+- scrolling.js
+- search-page-input.js
+- section-hydration.js
+- section-renderer.js
+- show-more.js
+- slideshow.js
+- template-giftcard.css
+- theme-editor.js
+- utilities.js
+- variant-picker.js
+- video-background.js
+- view-transitions.js
+- zoom-dialog.js
+
+---
+
+## blocks/
+- accelerated-checkout.liquid
+- accordion.liquid
+- add-to-cart.liquid
+- button.liquid
+- buy-buttons.liquid
+- collection-card.liquid
+- collection-title.liquid
+- contact-form-submit-button.liquid
+- contact-form.liquid
+- custom-liquid.liquid
+- email-signup.liquid
+- featured-collection.liquid
+- filters.liquid
+- follow-on-shop.liquid
+- footer-copyright.liquid
+- footer-policy-list.liquid
+- group.liquid
+- icon.liquid
+- image.liquid
+- jumbo-text.liquid
+- logo.liquid
+- menu.liquid
+- page-content.liquid
+- page.liquid
+- payment-icons.liquid
+- popup-link.liquid
+- price.liquid
+- product-card.liquid
+- product-custom-property.liquid
+- product-description.liquid
+- product-inventory.liquid
+- product-recommendations.liquid
+- product-title.liquid
+- quantity.liquid
+- review.liquid
+- social-links.liquid
+- spacer.liquid
+- swatches.liquid
+- text.liquid
+- variant-picker.liquid
+- video.liquid
+- _accordion-row.liquid
+- _announcement.liquid
+- _blog-post-card.liquid
+- _blog-post-content.liquid
+- _blog-post-description.liquid
+- _blog-post-featured-image.liquid
+- _blog-post-image.liquid
+- _blog-post-info-text.liquid
+- _cart-products.liquid
+- _cart-summary.liquid
+- _cart-title.liquid
+- _collection-card-image.liquid
+- _collection-card.liquid
+- _collection-image.liquid
+- _collection-info.liquid
+- _collection-link.liquid
+- _content-without-appearance.liquid
+- _content.liquid
+- _divider.liquid
+- _featured-blog-posts-card.liquid
+- _featured-blog-posts-image.liquid
+- _featured-blog-posts-title.liquid
+- _featured-product-gallery.liquid
+- _featured-product-price.liquid
+- _featured-product.liquid
+- _footer-social-icons.liquid
+- _header-logo.liquid
+- _header-menu.liquid
+- _heading.liquid
+- _image.liquid
+- _inline-collection-title.liquid
+- _inline-text.liquid
+- _marquee.liquid
+- _media-without-appearance.liquid
+- _media.liquid
+- _product-card-gallery.liquid
+- _product-card-group.liquid
+- _product-card.liquid
+- _product-details.liquid
+- _product-list-button.liquid
+- _product-list-content.liquid
+- _product-list-text.liquid
+- _product-media-gallery.liquid
+- _search-input.liquid
+- _slide.liquid
+- _social-link.liquid
+
+---
+
+## config/
+- settings_data.json
+- settings_schema.json
+
+---
+
+## layout/
+- password.liquid
+- theme.liquid
+
+---
+
+## locales/
+- bg.json
+- cs.json
+- cs.schema.json
+- da.json
+- da.schema.json
+- de.json
+- de.schema.json
+- el.json
+- en.default.json
+- en.default.schema.json
+- es.json
+- es.schema.json
+- fi.json
+- fi.schema.json
+- fr.json
+- fr.schema.json
+- hr.json
+- hu.json
+- id.json
+- it.json
+- it.schema.json
+- ja.json
+- ja.schema.json
+- ko.json
+- ko.schema.json
+- lt.json
+- nb.json
+- nb.schema.json
+- nl.json
+- nl.schema.json
+- pl.json
+- pl.schema.json
+- pt-BR.json
+- pt-BR.schema.json
+- pt-PT.json
+- pt-PT.schema.json
+- ro.json
+- ru.json
+- sk.json
+- sl.json
+- sv.json
+- sv.schema.json
+- th.json
+- th.schema.json
+- tr.json
+- tr.schema.json
+- vi.json
+- zh-CN.json
+- zh-CN.schema.json
+- zh-TW.json
+- zh-TW.schema.json
+
+---
+
+## sections/
+- collection-links.liquid
+- collection-list.liquid
+- custom-announcement.liquid
+- custom-liquid.liquid
+- divider.liquid
+- featured-blog-posts.liquid
+- featured-product.liquid
+- footer-group.json
+- footer-utilities.liquid
+- footer.liquid
+- header-announcements.liquid
+- header-group.json
+- header.liquid
+- hero.liquid
+- logo-marquee.liquid
+- logo.liquid
+- main-404.liquid
+- main-blog-post.liquid
+- main-blog.liquid
+- main-cart.liquid
+- main-collection-list.liquid
+- main-collection.liquid
+- main-page.liquid
+- marquee.liquid
+- media-with-content.liquid
+- password.liquid
+- predictive-search-empty.liquid
+- predictive-search.liquid
+- product-information.liquid
+- product-list.liquid
+- product-recommendations.liquid
+- search-header.liquid
+- search-results.liquid
+- section-rendering-product-card.liquid
+- section.liquid
+- slideshow.liquid
+- _blocks.liquid
+
+---
+
+## snippets/
+- account-actions.liquid
+- account-button.liquid
+- account-drawer.liquid
+- account-popover.liquid
+- add-to-cart-button.liquid
+- background-image.liquid
+- background-media.liquid
+- background-video.liquid
+- bento-grid.liquid
+- blog-comment-form.liquid
+- border-override.liquid
+- button.liquid
+- card-gallery.liquid
+- cart-bubble.liquid
+- cart-discount.liquid
+- cart-drawer.liquid
+- cart-icon-component.liquid
+- cart-note.liquid
+- cart-products.liquid
+- cart-summary.liquid
+- checkbox.liquid
+- collection-card.liquid
+- color-schemes.liquid
+- contact-form.liquid
+- disclosure-content.liquid
+- disclosure-trigger.liquid
+- divider.liquid
+- drawer-localization.liquid
+- dropdown-localization.liquid
+- editorial-blog-grid.liquid
+- editorial-collection-grid.liquid
+- editorial-product-grid.liquid
+- facets-actions.liquid
+- filter-remove-buttons.liquid
+- filters-toggle.liquid
+- fonts.liquid
+- gap-style.liquid
+- gift-card-recipient-form.liquid
+- grid-density-controls.liquid
+- group.liquid
+- header-actions.liquid
+- header-drawer.liquid
+- header-menu.liquid
+- header-row.liquid
+- icon-or-image.liquid
+- icon.liquid
+- image.liquid
+- jumbo-text.liquid
+- layout-panel-style.liquid
+- link-featured-image.liquid
+- list-filter.liquid
+- localization-form.liquid
+- media.liquid
+- mega-menu-list.liquid
+- mega-menu.liquid
+- menu-font-styles.liquid
+- meta-tags.liquid
+- overflow-list.liquid
+- overlay.liquid
+- predictive-search-empty-state.liquid
+- predictive-search-products-list.liquid
+- predictive-search-resource-carousel.liquid
+- predictive-search.liquid
+- price-filter.liquid
+- price.liquid
+- product-card-badges.liquid
+- product-card-variant-url.liquid
+- product-card.liquid
+- product-grid.liquid
+- product-media.liquid
+- quantity-selector.liquid
+- quick-add-modal.liquid
+- quick-add.liquid
+- resource-card.liquid
+- resource-image.liquid
+- resource-list-carousel.liquid
+- resource-list.liquid
+- scripts.liquid
+- search-modal.liquid
+- search.liquid
+- section.liquid
+- size-style.liquid
+- skip-to-content-link.liquid
+- slideshow-arrow.liquid
+- slideshow-arrows.liquid
+- slideshow-controls.liquid
+- slideshow-slide.liquid
+- slideshow.liquid
+- sorting.liquid
+- spacing-padding.liquid
+- spacing-style.liquid
+- strikethrough-variant.liquid
+- stylesheets.liquid
+- submenu-font-styles.liquid
+- swatch.liquid
+- tax-info.liquid
+- text.liquid
+- theme-editor.liquid
+- theme-styles-variables.liquid
+- timeline-scope.liquid
+- typography-style.liquid
+- unit-price.liquid
+- util-autofill-img-size-attr.liquid
+- util-mega-menu-img-sizes-attr.liquid
+- util-product-grid-card-size.liquid
+- util-product-media-sizes-attr.liquid
+- variant-main-picker.liquid
+- variant-quick-add.liquid
+- variant-swatches.liquid
+- video.liquid
+
+---
+
+## templates/
+- 404.json
+- article.json
+- blog.json
+- cart.json
+- collection.json
+- gift_card.liquid
+- index.json
+- list-collections.json
+- page.contact.json
+- page.json
+- password.json
+- product.json
+- search.json
+
+---
+
+## README.md
+
+---
+
+## .git/ .shopify/ (system folders)
+
+---
+
+**Tip:** To find unused files, cross-reference this list with your template, section, and asset references. If a file is not referenced in any template, section, snippet, or asset import, it's likely unused.
+
+---
+
+**UNUSED FILES (auto-detected):**
+- (Review before deleting; some files may be used dynamically or by custom code)
+- assets/drag-zoom-wrapper.js **UNUSED**
+- assets/floating-panel.js **UNUSED**
+- assets/morph.js **UNUSED**
+- assets/performance.js **UNUSED**
+- assets/view-transitions.js **UNUSED**
+- blocks/_media-without-appearance.liquid **UNUSED**
+- blocks/_content-without-appearance.liquid **UNUSED**
+- blocks/_featured-blog-posts-image.liquid **UNUSED**
+- blocks/_featured-blog-posts-title.liquid **UNUSED**
+- blocks/_featured-product-gallery.liquid **UNUSED**
+- blocks/_featured-product-price.liquid **UNUSED**
+- blocks/_footer-social-icons.liquid **UNUSED**
+- blocks/_heading.liquid **UNUSED**
+- blocks/_image.liquid **UNUSED**
+- blocks/_inline-collection-title.liquid **UNUSED**
+- blocks/_inline-text.liquid **UNUSED**
+- blocks/_marquee.liquid **UNUSED**
+- blocks/_media.liquid **UNUSED**
+- blocks/_product-card-gallery.liquid **UNUSED**
+- blocks/_product-card-group.liquid **UNUSED**
+- blocks/_product-list-button.liquid **UNUSED**
+- blocks/_product-list-content.liquid **UNUSED**
+- blocks/_product-list-text.liquid **UNUSED**
+- blocks/_search-input.liquid **UNUSED**
+- blocks/_slide.liquid **UNUSED**
+- blocks/_social-link.liquid **UNUSED**
+- blocks/_cart-products.liquid **UNUSED**
+- blocks/_cart-summary.liquid **UNUSED**
+- blocks/_cart-title.liquid **UNUSED**
+- blocks/_collection-card-image.liquid **UNUSED**
+- blocks/_collection-card.liquid **UNUSED**
+- blocks/_collection-image.liquid **UNUSED**
+- blocks/_collection-info.liquid **UNUSED**
+- blocks/_collection-link.liquid **UNUSED**
+- blocks/_divider.liquid **UNUSED**
+- blocks/_featured-blog-posts-card.liquid **UNUSED**
+- blocks/_blog-post-card.liquid **UNUSED**
+- blocks/_blog-post-content.liquid **UNUSED**
+- blocks/_blog-post-description.liquid **UNUSED**
+- blocks/_blog-post-featured-image.liquid **UNUSED**
+- blocks/_blog-post-image.liquid **UNUSED**
+- blocks/_blog-post-info-text.liquid **UNUSED**
+- blocks/_announcement.liquid **UNUSED**
+- blocks/_accordion-row.liquid **UNUSED**
+- blocks/_cart-products.liquid **UNUSED**
+- blocks/_cart-summary.liquid **UNUSED**
+- blocks/_cart-title.liquid **UNUSED**
+- blocks/_collection-card-image.liquid **UNUSED**
+- blocks/_collection-card.liquid **UNUSED**
+- blocks/_collection-image.liquid **UNUSED**
+- blocks/_collection-info.liquid **UNUSED**
+- blocks/_collection-link.liquid **UNUSED**
+- blocks/_divider.liquid **UNUSED**
+- blocks/_featured-blog-posts-card.liquid **UNUSED**
+- blocks/_blog-post-card.liquid **UNUSED**
+- blocks/_blog-post-content.liquid **UNUSED**
+- blocks/_blog-post-description.liquid **UNUSED**
+- blocks/_blog-post-featured-image.liquid **UNUSED**
+- blocks/_blog-post-image.liquid **UNUSED**
+- blocks/_blog-post-info-text.liquid **UNUSED**
+- blocks/_announcement.liquid **UNUSED**
+- blocks/_accordion-row.liquid **UNUSED**
+- blocks/_cart-products.liquid **UNUSED**
+- blocks/_cart-summary.liquid **UNUSED**
+- blocks/_cart-title.liquid **UNUSED**
+- blocks/_collection-card-image.liquid **UNUSED**
+- blocks/_collection-card.liquid **UNUSED**
+- blocks/_collection-image.liquid **UNUSED**
+- blocks/_collection-info.liquid **UNUSED**
+- blocks/_collection-link.liquid **UNUSED**
+- blocks/_divider.liquid **UNUSED**
+- blocks/_featured-blog-posts-card.liquid **UNUSED**
+- blocks/_blog-post-card.liquid **UNUSED**
+- blocks/_blog-post-content.liquid **UNUSED**
+- blocks/_blog-post-description.liquid **UNUSED**
+- blocks/_blog-post-featured-image.liquid **UNUSED**
+- blocks/_blog-post-image.liquid **UNUSED**
+- blocks/_blog-post-info-text.liquid **UNUSED**
+- blocks/_announcement.liquid **UNUSED**
+- blocks/_accordion-row.liquid **UNUSED**
+
+---
+
+(Review the above before deleting; some files may be used dynamically or by custom code)

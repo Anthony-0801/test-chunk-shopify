@@ -27,7 +27,7 @@
       "name": "Custom Announcement",
       "settings": {
         "text": "Free Shipping Over $50",
-        "repeat": 3
+        "repeat": 20
       }
     },
     "header_section": {
