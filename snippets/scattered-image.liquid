@@ -1,0 +1,19 @@
+<div class="scattered-image">
+  {% assign scattered_blocks = blocks | default: section.blocks %}
+  {% for block in scattered_blocks %}
+    {% if block.type == 'custom_scattered_image' %}
+      <div
+        class="scattered-image-item"
+        style="top:{{ block.settings.top_image }}%;left:{{ block.settings.left_image }}%;transform:rotate({{ block.settings.rotation_image }}deg);height:{{ block.settings.item_size }}px;width:{{ block.settings.item_size }}px;z-index:{{ block.settings.z_index | default: 1 }};position:absolute;"
+      >
+        <img
+          src="{{ block.settings.image | image_url }}"
+          alt="scattered image"
+          style="display:block;height:{{ block.settings.item_size }}px;width:{{ block.settings.item_size }}px;z-index:{{ block.settings.z_index | default: 1 }};"
+          width="{{ block.settings.item_size }}"
+          height="{{ block.settings.item_size }}"
+        >
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

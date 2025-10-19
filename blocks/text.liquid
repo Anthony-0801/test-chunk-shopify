@@ -128,6 +128,10 @@
         {
           "value": "var(--font-accent--family)",
           "label": "t:options.accent"
+        },
+        {
+          "value": "'True North Black', sans-serif",
+          "label": "True North Black"
         }
       ],
       "default": "var(--font-body--family)",
@@ -187,6 +191,10 @@
           "label": "56px"
         },
         {
+          "value": "6rem",
+          "label": "96px"
+        },
+        {
           "value": "4.5rem",
           "label": "72px"
         },
@@ -208,6 +216,20 @@
         }
       ],
       "default": "1rem",
+      "visible_if": "{{ block.settings.type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "weight",
+      "label": "t:settings.weight",
+      "options": [
+        { "value": "400", "label": "400" },
+        { "value": "600", "label": "600" },
+        { "value": "700", "label": "700" },
+        { "value": "800", "label": "800" },
+        { "value": "900", "label": "900" }
+      ],
+      "default": "900",
       "visible_if": "{{ block.settings.type_preset == 'custom' }}"
     },
     {

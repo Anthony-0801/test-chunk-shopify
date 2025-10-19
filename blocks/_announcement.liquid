@@ -2,33 +2,20 @@
 
 {%- assign block_settings = block.settings -%}
 {%- assign plain_text = block_settings.text | strip_newlines | strip_html | strip -%}
-{%- assign block_index = section.blocks | find_index: 'id', block.id -%}
 
 {%- unless plain_text == '' -%}
-  <slideshow-slide
-    ref="slides[]"
-    class="
-      announcement-bar__slide
-      text-block
-      text-block--{{ block.id }}
-      text-block--align-center
-      text-block--full-width
-      custom-typography
-      {% if block_settings.font_size != "" %}custom-font-size{% endif %}
-      {% if block_settings.weight != "" %}custom-font-weight{% endif %}
-    "
-    style="
-      {% render 'typography-style', settings: block_settings, preset: 'custom' %}
-      --width: 100%;
-      --text-align: center;
-      --line-height: 1;
-    "
-    {{ block.shopify_attributes }}
-    aria-hidden="{% if block_index == 0 %}false{% else %}true{% endif %}"
-  >
-    <p class="announcement-bar__text">
-      {{ block.settings.text }}
-    </p>
+ 
+    {%- comment -%}
+      Wrap announcement text in a marquee container. The animation duration is driven
+      by the parent section's `speed` setting (fallback 5s). Animation pauses on hover
+      and is disabled when user prefers reduced motion.
+    {%- endcomment -%}
+    <div
+      class="announcement-bar__text announcement-bar__marquee"
+      style="--marquee-duration: {{ section.settings.speed | default: 5 }}s; --width: 100%;"
+    >
+      <span class="announcement-marquee__inner">{{ block.settings.text }}</span>
+    </div>
 
     {% if block_settings.link != blank %}
       <a
@@ -40,7 +27,7 @@
         </span>
       </a>
     {% endif %}
-  </slideshow-slide>
+  
 {%- endunless -%}
 
 {% stylesheet %}
@@ -117,6 +104,45 @@
   .text-block--align-center,
   .text-block--align-center > * {
     margin-inline: auto;
+  }
+
+  /* Marquee styles for announcements */
+  .announcement-bar__marquee {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .announcement-marquee__inner {
+    /* Make the inner element fill its parent so the announcement occupies 100% of the container */
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+    will-change: transform;
+    /* default duration can be overridden with --marquee-duration */
+    animation: marquee var(--marquee-duration, 5s) linear infinite;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Pause on hover to improve readability */
+  .announcement-bar__marquee:hover .announcement-marquee__inner {
+    animation-play-state: paused;
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .announcement-marquee__inner {
+      animation: none;
+      transform: none;
+    }
   }
 
   .text-block--align-right,

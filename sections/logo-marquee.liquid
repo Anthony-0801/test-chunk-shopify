@@ -1,0 +1,143 @@
+{% comment %}
+Logo Marquee section
+- Allows store editors to add multiple logo images (blocks)
+- Settings: speed (seconds), logo_height (px), gap (px), pause_on_hover (bool)
+- Implements a CSS-only continuous marquee by duplicating the logo track
+{% endcomment %}
+
+<div class="logo-marquee section section--page-width color-{{ section.settings.color_scheme }}" id="LogoMarquee-{{ section.id }}">
+  <div class="logo-marquee__inner" style="--marquee-speed: {{ section.settings.speed | default: 15 }}s; --logo-height: {{ section.settings.logo_height | default: 48 }}px; --logo-gap: {{ section.settings.gap | default: 24 }}px;">
+    <div class="logo-marquee__track" aria-hidden="true">
+      {% for block in section.blocks %}
+        {% if block.type == 'logo' and block.settings.image != blank %}
+          <div class="logo-marquee__item">
+            <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.image.alt | escape }}" style="height: var(--logo-height);" loading="lazy" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" />
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Duplicate track for seamless effect -->
+    <div class="logo-marquee__track logo-marquee__track--duplicate" aria-hidden="true">
+      {% for block in section.blocks %}
+        {% if block.type == 'logo' and block.settings.image != blank %}
+          <div class="logo-marquee__item">
+            <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.image.alt | escape }}" style="height: var(--logo-height);" loading="lazy" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" />
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .logo-marquee {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .logo-marquee__inner {
+    display: flex;
+    align-items: center;
+    gap: var(--logo-gap);
+  }
+
+  .logo-marquee__track {
+    display: flex;
+    align-items: center;
+    gap: var(--logo-gap);
+    animation: logo-marquee var(--marquee-speed) linear infinite;
+  }
+
+  /* Duplicate track runs the same animation so when first track exits second follows */
+  .logo-marquee__track--duplicate {
+    margin-left: 0;
+  }
+
+  .logo-marquee__item img {
+    display: block;
+    height: var(--logo-height);
+    width: auto;
+    object-fit: contain;
+  }
+
+  @keyframes logo-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .logo-marquee__inner:hover .logo-marquee__track {
+    animation-play-state: paused;
+  }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .logo-marquee__track { animation: none; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Logo marquee",
+  "settings": [
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Scroll duration (s)",
+      "min": 5,
+      "max": 60,
+      "step": 1,
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "logo_height",
+      "label": "Logo height (px)",
+      "min": 24,
+      "max": 200,
+      "step": 2,
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap between logos (px)",
+      "min": 8,
+      "max": 80,
+      "step": 2,
+      "default": 24
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pause on hover",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo marquee",
+      "category": "Media"
+    }
+  ]
+}
+{% endschema %}
